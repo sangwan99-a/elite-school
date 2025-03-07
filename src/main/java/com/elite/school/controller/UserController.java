@@ -22,8 +22,9 @@ public class UserController {
 
     // Endpoint for registering a user
     @PostMapping(APIConstants.USER_REGISTER)
-    public ResponseEntity<User> registerUser(@RequestBody User user) {
+    public ResponseEntity<String> registerUser(@RequestBody User user) {
         User registeredStudent = userService.registerUser(user);
-        return new ResponseEntity<>(registeredStudent, HttpStatus.CREATED);
+        String anil="user registered sucessfully";
+        return new ResponseEntity<>(anil, HttpStatus.OK);
     }
 }

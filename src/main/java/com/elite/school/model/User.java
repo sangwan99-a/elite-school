@@ -1,20 +1,16 @@
 package com.elite.school.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
-@Data
 @Entity
+@Table(name = "\"user\"")
 public class User {
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+
     private String email;
-
-
-
+    private String name;
+    // Getters and Setters
 }
-
-

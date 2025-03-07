@@ -1,6 +1,8 @@
 package com.elite.school.framework.filter;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class AbtAuthenticator {
     private static final Logger LOGGER = LoggerFactory.getLogger(AbtAuthenticator.class);
